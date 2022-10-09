@@ -84,21 +84,21 @@ function Store(){
     var first = "Foo Bar",
         second = ["Hello", "World"];
 
-    localStorage.setItem("first", first);
+    sessionStorage.setItem("first", first);
 
-    localStorage.setItem("second", JSON.stringify(second));
+    sessionStorage.setItem("second", JSON.stringify(second));
 }
 
 function Retrieve(){
-    var newFirst = localStorage.getItem("first");
-    var newSecond = JSON.parse(localStorage.getItem("second"));
+    var newFirst = sessionStorage.getItem("first");
+    var newSecond = JSON.parse(sessionStorage.getItem("second"));
 
     console.log(newFirst);
     console.log(newSecond);
 
-    localStorage.removeItem("first");
-    localStorage.removeItem("second");
-    localStorage.clear();
+    sessionStorage.removeItem("first");
+    sessionStorage.removeItem("second");
+    sessionStorage.clear();
 }
 
 setButt.addEventListener("click", Store);
